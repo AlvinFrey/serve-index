@@ -19,7 +19,7 @@ i{
 }
 
 html{
-    background : url('img/background.jpg') no-repeat center center fixed;
+    background : url('file://./img/background.jpg') no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
 }
