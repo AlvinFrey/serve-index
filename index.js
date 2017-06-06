@@ -648,6 +648,6 @@ var icons = {
   '.yaws': 'page_white_code.png',
   '.bin': 'binary.png',
   '.dat': 'binary.png',
-  '.wav': 'sound.png',
-  '.mp3': 'sound.png'
+  '.wav': 'audio.png',
+  '.mp3': 'audio.png'
 };
