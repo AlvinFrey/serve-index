@@ -203,7 +203,8 @@ serveIndex.html = function _html(req, res, files, next, dir, showUp, icons, path
         fileList: fileList,
         path: path,
         style: style,
-        viewName: view
+        viewName: view,
+        stationID: opts.stationID
       };
 
       // render html
