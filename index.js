@@ -307,7 +307,7 @@ function createHtmlRender(template) {
         .replace(/\{files\}/g, createHtmlFileList(locals.fileList, locals.directory, locals.displayIcons, locals.viewName))
         .replace(/\{directory\}/g, escapeHtml(locals.directory))
         .replace(/\{linked-path\}/g, htmlPath(locals.directory))
-        .replace(/\{station-id\}/g, locals.stationID;
+        .replace(/\{station-id\}/g, locals.stationID);
 
       callback(null, body);
     });
