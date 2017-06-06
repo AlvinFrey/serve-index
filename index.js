@@ -92,7 +92,7 @@ function serveIndex(root, options) {
   // resolve root to absolute and normalize
   var rootPath = normalize(resolve(root) + sep);
 
-  var stationID = opts.stationID || 'UNDEFINED_ID;
+  var stationID = opts.stationID || 'UNDEFINED_ID';
   var filter = opts.filter;
   var hidden = opts.hidden;
   var icons = opts.icons;
