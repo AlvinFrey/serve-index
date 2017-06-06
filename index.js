@@ -644,5 +644,9 @@ var icons = {
   '.vbs': 'page_white_code.png',
   '.xcf': 'page_white_picture.png',
   '.xlsx': 'page_white_excel.png',
-  '.yaws': 'page_white_code.png'
+  '.yaws': 'page_white_code.png',
+  '.bin': 'binary.png',
+  '.dat': 'binary.png',
+  '.wav': 'sound.png',
+  '.mp3': 'sound.png'
 };
