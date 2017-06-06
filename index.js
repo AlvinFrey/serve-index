@@ -82,7 +82,6 @@ var mediaType = {
 
 function serveIndex(root, options) {
   var opts = options || {};
-  console.log(opts);
 
   // root required
   if (!root) {
