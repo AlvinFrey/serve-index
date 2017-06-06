@@ -92,14 +92,14 @@ function serveIndex(root, options) {
   // resolve root to absolute and normalize
   var rootPath = normalize(resolve(root) + sep);
 
+  var stationID = opts.stationID || 'UNDEFINED_ID;
   var filter = opts.filter;
   var hidden = opts.hidden;
   var icons = opts.icons;
   var stylesheet = opts.stylesheet || defaultStylesheet;
   var template = opts.template || defaultTemplate;
   var view = opts.view || 'tiles';
-  var stationID = opts.stationID;
-
+  
   return function (req, res, next) {
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       res.statusCode = 'OPTIONS' === req.method ? 200 : 405;
@@ -162,7 +162,7 @@ function serveIndex(root, options) {
 
         // not acceptable
         if (!type) return next(createError(406));
-        serveIndex[mediaType[type]](req, res, files, next, originalDir, showUp, icons, path, view, template, stylesheet);
+        serveIndex[mediaType[type]](req, res, files, next, originalDir, showUp, icons, path, view, template, stylesheet, stationID);
       });
     });
   };
@@ -172,7 +172,7 @@ function serveIndex(root, options) {
  * Respond with text/html.
  */
 
-serveIndex.html = function _html(req, res, files, next, dir, showUp, icons, path, view, template, stylesheet) {
+serveIndex.html = function _html(req, res, files, next, dir, showUp, icons, path, view, template, stylesheet, stationID) {
   var render = typeof template !== 'function'
     ? createHtmlRender(template)
     : template
